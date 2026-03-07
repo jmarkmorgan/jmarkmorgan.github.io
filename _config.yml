@@ -1,5 +1,8 @@
+title: "Wish Upon a Fish"
+lang: "en-US"
 baseurl: ""
-url: ""
+url: "https://wishuponafish.org"
+domain: "wishuponafish.org"
 
 # Build settings
 markdown: kramdown
@@ -19,7 +22,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate-v2
   - jekyll-watch
-  - jekyll-toc   #Documentation TOC 
+  - jekyll-toc
 
 # TOC Settings for documentation
 toc:
@@ -38,7 +41,7 @@ toc:
 # Pagination
 pagination:
   enabled: true
-  debug: true
+  debug: false
   collections:
     - name: 'posts'
       per_page: 6
@@ -65,8 +68,10 @@ defaults:
 
 # Exclude from processing and watching
 exclude:
+  - 404.html
   - Gemfile
   - Gemfile.lock
+  - index.markdown
   - node_modules
   - vendor
   - .sass-cache/

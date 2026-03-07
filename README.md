@@ -1,35 +1,22 @@
-# Sandbox Jekyll Theme
+# Wish Upon a Fish
 
-A modern and flexible Jekyll theme based on the Sandbox template.
+This repository contains the production Jekyll site for [wishuponafish.org](https://wishuponafish.org).
 
-## Installation
-
-1. Clone this repository
-2. Run `bundle install`
-3. Run `bundle exec jekyll serve` to start the development server
-
-## Development
+## Local development
 
 ```bash
-# Start development server
+bundle install
 bundle exec jekyll serve --livereload
+```
 
-# Build for production
+## Production build
+
+```bash
 JEKYLL_ENV=production bundle exec jekyll build
 ```
 
-## Project Structure
+## GitHub Pages deployment
 
-```
-my-sandbox-theme/
-├── _data/          # Site data files
-├── _includes/      # Reusable components
-├── _layouts/       # Page layouts
-├── _posts/         # Blog posts
-├── _sass/          # Sass partials
-├── assets/         # Static files
-├── _config.yml     # Site configuration
-└── README.md       # Project documentation
-```
+Deployment is handled by `.github/workflows/deploy-pages.yml`.
 
 
