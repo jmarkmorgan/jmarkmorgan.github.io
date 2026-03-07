@@ -1,0 +1,28 @@
+{% assign style_key = include.header_style | default: 'blog-list' %}
+{% assign style = site.data.header.styles[style_key] %}
+
+<section class="{{ style.section_classes }} position-relative overflow-hidden"
+         style="height: clamp(360px, 55vh, 620px);">
+
+    <!-- Background image layer -->
+    <figure class="position-absolute top-0 start-0 w-100 h-100 m-0" style="z-index: 1;">
+        <img alt=""
+             class="w-100 h-100"
+             src="{{ style.section_image }}"
+             style="object-fit: cover;">
+    </figure>
+
+    <!-- Optional: dark overlay for readability-->
+    <div class="position-absolute top-0 start-0 w-100 h-100"
+         style="background: rgba(0,0,0,.35); z-index: 1;"></div>
+
+    <!-- Content layer -->
+    <div class="container position-relative h-100" style="z-index: 2;">
+        <div class="row h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-10 col-xl-9 col-xxl-8 mx-auto">
+                <h1 class="display-1 mb-4 text-white">{{ include.title }}</h1>
+                <p class="lead fs-lg mb-0 text-white">{{ include.subtitle }}</p>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,35 @@
+# Main Footer Configuration
+
+# General Settings
+style: default          # Options: default, centered, centered-overlay, three-column, three-column-alt, four-column, minimal, blog, basic
+bg_color: bg-light      # Options: bg-light, bg-dark, bg-navy, bg-primary, bg-soft-primary, etc.
+text_color: ""          # Options: text-inverse (for light text on dark backgrounds)
+link_class: text-reset  # Default link style
+container_padding: py-13 py-md-15  # Custom padding classes for the container
+widget_title_class: text-dark  # Class for widget titles
+
+# Call to Action Section
+cta:
+  enabled: false
+  title: Join our community by using our services and grow your business.
+  button_text: Try It For Free
+  button_url: "#"
+
+# Default Footer (4-column)
+column_2:
+  title: Get in Touch
+  address: 1809 Limerick Ln <br class="d-none d-md-block" /> Columbia, MO, United States <br class="d-none d-md-block" /> 65203
+  email: markmorgan@missouri.edu
+#  phone: 00 (123) 456 78 90
+
+column_3:
+  title: Learn More
+  links:
+    - title: About
+      url: /about
+    - title: News
+      url: /news
+    - title: Donate
+      url: https://givebutter.com/wishuponafish
+    - title: Contact
+      url: /contact

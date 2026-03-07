@@ -1,0 +1,80 @@
+{
+  "members": [
+    {
+      "name": "Dr. Mark Morgan",
+      "role": "Founder & President",
+      "bio": "Dr. Mark Morgan is Founder and President of Wish Upon a Fish, a US-based nonprofit that addresses malnutrition using fish protein powder to fortify the diets of women and children in developing countries. Dr. Morgan authored the award-winning book, Something’s Fishy, a children’s story on creative solutions for invasive species. A former Fulbright scholar, Mark retired from his faculty position in the School of Natural Resources at the University of Missouri in 2023.",
+      "avatar_image": "/assets/img/avatars/markmorgan.webp",
+      "avatar_image2x": "/assets/img/avatars/markmorgan.webp",
+      "bio_image": "/assets/img/avatars/markmorgan.webp",
+      "bio_image2x": "/assets/img/avatars/markmorgan.webp",
+      "social": [
+        {
+          "url": "https://scholar.google.com/citations?user=p592BHcAAAAJ",
+          "icon": "uil uil-globe"
+        }
+      ]
+    },
+    {
+      "name": "Dr. Martin Nandelenga",
+      "role": "Co-Founder & Vice President",
+      "bio": "Martin Wafula Nandelenga is an economist with over 15 years of experience in academia and public policy research. Currently, he is a Senior Policy Analyst at the Kenya Institute for Public Policy Research and Analysis (KIPPRA), Nairobi, Kenya.",
+      "avatar_image": "/assets/img/avatars/martinnandelenga.webp",
+      "avatar_image2x": "/assets/img/avatars/martinnandelenga.webp",
+      "bio_image": "/assets/img/avatars/martinnandelenga.webp",
+      "bio_image2x": "/assets/img/avatars/martinnandelenga.webp",
+      "social": [
+        {
+          "url": "https://www.afdb.org/en",
+          "icon": "uil uil-globe"
+        }
+      ]
+    },
+    {
+      "name": "Brian Ryckbost",
+      "role": "Secretary",
+      "bio": "Brian Ryckbost is a Michigan-based entrepreneur and manufacturer who enjoys creating practical solutions from discarded or overlooked resources. He brings curiosity, problem-solving skills, and a genuine belief in long-term stewardship to the organizations and communities he supports.",
+      "avatar_image": "/assets/img/avatars/brianryckbost.webp",
+      "avatar_image2x": "/assets/img/avatars/brianryckbost.webp",
+      "bio_image": "/assets/img/avatars/brianryckbost.webp",
+      "bio_image2x": "/assets/img/avatars/brianryckbost.webp",
+      "social": [
+        {
+          "url": "https://www.enagonllc.com/",
+          "icon": "uil uil-globe"
+        }
+      ]
+    },
+    {
+      "name": "Yongqin Yu",
+      "role": "Business Development Specialist",
+      "bio": "Angie Yu, a Chinese businesswoman is President of Two Rivers Fisheries (TRF) in Wickliffe, KY. Starting in 2013, TRF is a major fish processor that specializes in silver carp, an overly abundant invasive fish found in Mississippi River and its tributaries. Every part of the carp is utilized based on her philosophy of zero waste. Some of the products are for human or animal consumption, but others include oils, fertilizer, clothing (from the skin), and jewelry (from the bones). She traveled to Kenya in 2025 to explore food options for women and children. Her company has won numerous awards, including being named one of the Top 100 small business in 2024 by the US Chamber of Commerce.",
+      "avatar_image": "/assets/img/avatars/yu.webp",
+      "avatar_image2x": "/assets/img/avatars/yu.webp",
+      "bio_image": "/assets/img/avatars/yu.webp",
+      "bio_image2x": "/assets/img/avatars/yu.webp",
+      "social": [
+        {
+          "url": "https://www.tworiversfisheries.com/",
+          "icon": "uil uil-globe"
+        }
+      ]
+    },
+    {
+      "name": "Joyce Liti Njenga",
+      "role": "Program Manager",
+      "bio": "Joyce Liti Njenga is a Senior Research Scientist, Fisheries and Aquaculture at Jomo Kenyatta University of Agriculture & Technology. Her work focuses on training and research in Fisheries and Aquaculture. She conducts workshops for small and medium scale farmers in Kenya to reduce poverty and improve local livelihoods. She has also been involved with the Food and Agriculture Organization and World Vision to address gender inclusivity in fisheries. She has also been instrumental in training county officers on fisheries and aquaculture techniques across Kenya. Joyce is passionate about skills development and knowledge dissemination which has shown to reduce unemployment, increase productivity, and improve standards of living.",
+      "avatar_image": "/assets/img/avatars/joyce.webp",
+      "avatar_image2x": "/assets/img/avatars/joyce.webp",
+      "bio_image": "/assets/img/avatars/joyce.webp",
+      "bio_image2x": "/assets/img/avatars/joyce.webp",
+      "social": [
+        {
+          "url": "https://www.jkuat.ac.ke/",
+          "icon": "uil uil-globe"
+        }
+      ]
+    }
+  ]
+}
+  
