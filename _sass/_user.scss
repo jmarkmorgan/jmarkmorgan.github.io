@@ -2,3 +2,19 @@
 .accordion-wrapper .card-header button {
     box-shadow: none;
 }
+
+@media (min-width: 768px) {
+  .overlap-grid-about .item:nth-child(1) {
+    width: 70%;
+    margin-top: 0;
+    margin-left: 0;
+    z-index: 4;
+  }
+
+  .overlap-grid-about .item:nth-child(2) {
+    width: 55%;
+    margin-top: -45%;
+    margin-left: 45%;
+    z-index: 3;
+  }
+}
