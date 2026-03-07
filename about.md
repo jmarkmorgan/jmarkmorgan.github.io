@@ -10,7 +10,7 @@ scroll_top_btn:
 # Header / Hero Section
 hero:
   title: "Wish Upon a Fish"
-  subtitle: "Reimagine. Repurpose. Restore."
+  subtitle: "<i>Reimagine. Repurpose. Restore.</i>"
   bg_image: /assets/img/photos/orange-fish.webp
   bg_class: "wrapper gradient-8 bg-lines"
 
@@ -31,7 +31,7 @@ services:
   title_tag: "Rationale"
   title_class: "fs-24 text-uppercase text-yellow mb-3"
   main_title: "Why fish powder? It's a practical, compassionate, and scalable solution."
-  main_title_class: "display-3 text-white mb-10"
+  main_title_class: "display-3 text-blue mb-10"
   service_items:
     - icon: "/assets/img/icons/lineal/users.svg"
       title: Humanity

@@ -31,7 +31,7 @@ about:
   title_class: "fs-16 text-uppercase text-primary mb-3"
   main_title: "Feeding the World...<br />One Fish at a Time"
   main_title_class: "display-3 mb-5"
-  text: "<i>Wish Upon a Fish</i> is a charitable organization that reimagines global malnutrition using Asian carp, an overly abundant but underutilized invasive species in U.S. waterways. Grounded in compassion, environmental stewardship, and pragmatic innovation, this nonprofit aims to fortify the diets of women and children in developing countries with a shelf-stable, protein-rich fish powder. By restoring ecosystems, repurposing overlooked resources, and partnering across sectors, <i>Wish Upon a Fish</i> is more than a creative solution for undernourishment; it’s a moral imperative. Please join us, <i>In the Fight</i>."
+  text: "<i>Wish Upon a Fish</i> is a charitable organization that reimagines global malnutrition using Asian carp, an overly abundant but underutilized invasive species in U.S. waterways. Rooted in compassion, environmental stewardship, and pragmatic innovation, this nonprofit aims to fortify the diets of women and children in developing countries with a shelf-stable, protein-rich fish powder. By restoring ecosystems, repurposing overlooked resources, and partnering across sectors, <i>Wish Upon a Fish</i> is more than a creative solution for undernourishment; it’s a moral imperative. Please join us, <i>In the Fight</i>."
   images:
     - image: "/assets/img/photos/haiti.webp"
       image2x: "/assets/img/photos/haiti.webp"

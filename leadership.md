@@ -9,7 +9,7 @@ scroll_top_btn:
 
 hero:
   title: "Leadership"
-  subtitle: "Board of Directors and Collaborators"
+  subtitle: "<i>Board of Directors and Collaborators</i>"
   bg_image: /assets/img/photos/orange-fish.webp
   bg_class: "wrapper gradient-8 bg-lines"
 

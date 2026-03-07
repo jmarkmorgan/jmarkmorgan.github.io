@@ -27,6 +27,8 @@ column_3:
   links:
     - title: About
       url: /about
+    - title: Leadership
+      url: /leadership/
     - title: News
       url: /news
     - title: Donate

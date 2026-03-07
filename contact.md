@@ -9,7 +9,7 @@ scroll_top_btn:
 
 # Header / Hero Section
 hero:
-  title: "Get in Touch"
+  title: "Contact"
   bg_image: /assets/img/photos/orange-fish.webp
   bg_class: "wrapper gradient-8 bg-lines"
 
