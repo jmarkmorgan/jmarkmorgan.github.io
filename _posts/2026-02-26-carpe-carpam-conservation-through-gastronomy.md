@@ -8,6 +8,7 @@ category: Article
 featured_image: /assets/img/photos/chowder2-1024x768.webp
 featured: true
 excerpt: Asian carp are not only a destructive invasive species but also a promising, healthy food source that could help support conservation efforts by creating consumer demand for harvesting and eating them.
+news_order: 6
 tags:
   - Asian Carp
   - Gastronomy

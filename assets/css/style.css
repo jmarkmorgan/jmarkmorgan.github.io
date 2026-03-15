@@ -45656,3 +45656,36 @@ footer.bg-dark.angled.lower-start:after, footer.bg-dark.angled.upper-start:befor
 .accordion-wrapper .card-header button {
   box-shadow: none;
 }
+
+@media (min-width: 992px) {
+  .navbar.position-absolute.transparent:not(.fixed) {
+    --bs-navbar-color: rgba(255, 255, 255, 0.85);
+    --bs-navbar-hover-color: #fff;
+    --bs-navbar-active-color: #fff;
+    --bs-navbar-brand-color: #fff;
+    --bs-navbar-brand-hover-color: #fff;
+  }
+
+  .navbar.position-absolute.transparent:not(.fixed) .navbar-nav .nav-link,
+  .navbar.position-absolute.transparent:not(.fixed) .navbar-other .nav-link,
+  .navbar.position-absolute.transparent:not(.fixed) .dropdown-toggle:after,
+  .navbar.position-absolute.transparent:not(.fixed) button.hamburger {
+    color: #fff !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .overlap-grid-about .item:nth-child(1) {
+    width: 70%;
+    margin-top: 0;
+    margin-left: 0;
+    z-index: 4;
+  }
+
+  .overlap-grid-about .item:nth-child(2) {
+    width: 55%;
+    margin-top: -45%;
+    margin-left: 45%;
+    z-index: 3;
+  }
+}

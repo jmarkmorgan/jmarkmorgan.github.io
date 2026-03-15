@@ -8,6 +8,7 @@ category: Design
 #header_image: /assets/img/photos/bg7.webp
 featured_image: /assets/img/photos/driftwood.webp
 excerpt: Brandon Butler and Nathan “Shags” McLeod talk with Dr. Mark Morgan, Professor at The University of Missouri's School of Natural Resources.
+news_order: 2
 tags:
   - Asian Carp
   - Podcast

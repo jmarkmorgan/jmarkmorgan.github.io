@@ -31,7 +31,7 @@ services:
   title_tag: "Rationale"
   title_class: "fs-24 text-uppercase text-yellow mb-3"
   main_title: "Why fish powder? It's a practical, compassionate, and scalable solution."
-  main_title_class: "display-3 text-blue mb-10"
+  main_title_class: "display-3 text-sky mb-10"
   service_items:
     - icon: "/assets/img/icons/lineal/users.svg"
       title: Humanity

@@ -9,6 +9,7 @@ header_image: /assets/img/photos/holdingcarp.webp
 featured_image: /assets/img/photos/holdingcarp.webp
 featured: true
 excerpt: Silver and bighead carps were imported from China to the United States in the 1970s as a biological control mechanism for improving water quality. After escaping captivity, both species spread into the Mississippi River Basin and now threaten to enter the Great Lakes. Human consumption is one solution, but many Americans believe that carp is unsavory.
+news_order: 9
 tags:
   - Asian Carp
   - Consumer Perception

@@ -9,6 +9,7 @@ featured: true
 #header_image: /assets/img/photos/orange-fish.webp
 featured_image: /assets/img/photos/mark-fish.webp
 excerpt: Long considered a trash fish, invasive carp are hammering watery ecosystems. And now they are on the verge of disrupting a multibilion-dolar fishing industry. Yet, beneath the half-moon scales, Asian carp pack some of the best aquatic protein going. Is there a way to upcycle our way out of the problem?
+news_order: 7
 tags:
   - Asian Carp
   - Invasive Species

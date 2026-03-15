@@ -9,6 +9,7 @@ featured: true
 header_image: /assets/img/photos/Asian_Carp_1.webp
 featured_image: /assets/img/photos/Asian_Carp_1.webp
 excerpt: Dr. Mark Morgan, Associate Professor at the School of Natural Resources at the University of Missouri discusses the possibilities of utilizing the vast numbers of Asian carp in the United States to
+news_order: 3
 tags:
   - Asian Carp
   - Podcast

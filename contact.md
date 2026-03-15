@@ -17,8 +17,7 @@ hero:
 contact_card:
   position: "mt-n19"
   map:
-    enable: true
-    embed_url: "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJyYKBu_Or3IcRIG-9ui1pEaA&key=AIzaSyDJUsH-ObfppxSzRxb-Zl3IndoqcfXkO8o"
+    enable: false
   contact_info:
     - icon: "location-pin-alt"
       title: "Address"

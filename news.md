@@ -5,4 +5,7 @@ permalink: /news/
 description: <i>Recent news of Wish Upon a Fish. Learn more about our work.</i>
 pagination:
   enabled: true
+  per_page: 6
+  sort_field: "news_order"
+  sort_reverse: false
 ---
