@@ -103,7 +103,13 @@ content:
             - Food Neophobia
       - name: body
         label: Story Text
-        description: Write the full post here. Normal paragraphs are fine. Existing links or embeds can stay as they are.
+        description: Write the full post here using the visual editor. Use normal paragraphs, headings, lists, and links.
+        type: rich-text
+        options:
+          path: assets/img/photos
+      - name: embed_code
+        label: Advanced Embed
+        description: Optional. Only use this for podcast players or special embeds. Most posts should leave this blank.
         type: code
         options:
-          language: markdown
+          language: html
