@@ -2,7 +2,6 @@
 layout: default
 title: Wish Upon a Fish
 permalink: /
-custom_color: primary
 custom_font: space
 box_layout: true
 bg_light: true
