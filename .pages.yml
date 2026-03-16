@@ -13,7 +13,7 @@ content:
     subfolders: false
     view:
       primary: title
-      fields: [ date, category ]
+      fields: [ title, date, category ]
       sort: [ date, title ]
       default:
         sort: date
