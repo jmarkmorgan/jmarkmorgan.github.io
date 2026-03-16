@@ -2,11 +2,19 @@
   <div class="col-md-4 col-lg-3">
     <div class="widget">
       {% if include.lightText %}
-        <img class="mb-4" src="{{ site.data.theme.light_logo_1x | default: '/assets/img/logo-light.webp' | relative_url }}" 
-             srcset="{{ site.data.theme.light_logo_2x | default: '/assets/img/logo-light@2x.webp' | relative_url }} 2x" alt="" />
+      <img alt=""
+           class="mb-4"
+           height="150"
+           src="{{ site.data.theme.light_logo_1x_footer | default: '/assets/img/logo.webp' | relative_url }}"
+           srcset="{{ site.data.theme.light_logo_2x_footer | default: '/assets/img/logo.webp' | relative_url }} 2x"/>
       {% else %}
-        <img class="mb-4" src="{{ site.data.theme.dark_logo_1x | default: '/assets/img/logo-dark.webp' | relative_url }}" 
-             srcset="{{ site.data.theme.dark_logo_2x | default: '/assets/img/logo-dark@2x.webp' | relative_url }} 2x" alt="" />
+      <!--        <img class="mb-4" src="{{ site.data.theme.dark_logo_1x | default: '/assets/img/logo-dark.webp' | relative_url }}" -->
+      <!--             srcset="{{ site.data.theme.dark_logo_2x | default: '/assets/img/logo-dark@2x.webp' | relative_url }} 2x" alt="" />-->
+      <img alt=""
+           class="mb-4"
+           height="150"
+           src="{{ site.data.theme.dark_logo_1x_footer | default: '/assets/img/logo.webp' | relative_url }}"
+           srcset="{{ site.data.theme.dark_logo_2x_footer | default: '/assets/img/logo.webp' | relative_url }} 2x"/>
       {% endif %}
       <p class="mb-4">© {{ site.time | date: '%Y' }} {{ site.data.theme.company_name | default: site.title | default: 'Sandbox' }}. <br class="d-none d-lg-block" />All rights reserved.</p>
       <nav class="nav social {% if include.lightText %}social-white{% endif %}">

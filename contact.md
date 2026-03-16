@@ -28,8 +28,8 @@ contact_card:
     - icon: "envelope"
       title: "E-mail"
       links:
-        - label: "markmorgan@missouri.edu"
-          url: "mailto:markmorgan@missouri.edu"
+        - label: "contact@wishuponafish.org"
+          url: "mailto:contact@wishuponafish.org"
 
 # Contact Form Section
 contact_form:
