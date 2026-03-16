@@ -17,6 +17,20 @@ JEKYLL_ENV=production bundle exec jekyll build
 
 ## GitHub Pages deployment
 
-Deployment is handled by `.github/workflows/deploy-pages.yml`.
+Deployment is handled by `.github/workflows/jekyll-pages.yml`.
 
+## CMS for News
 
+News posts can be edited through [Pages CMS](https://app.pagescms.org/) using the repo config in `.pages.yml`.
+
+1. Sign in to Pages CMS with GitHub.
+2. Open this repository and branch.
+3. Use the `News` collection to create or edit files in `_posts/`.
+
+Notes:
+
+- `news_order` controls the order on `/news/`; lower numbers appear first.
+- `featured_image` is used for the News card image.
+- `header_image` is optional; if left empty, the post uses the default orange banner.
+- Publishing still happens through the existing GitHub Actions Pages workflow after content is committed.
+- A plain-English editor guide is in `CMS-NEWS-GUIDE.md`.

@@ -1,0 +1,109 @@
+media: assets/img/photos
+
+settings:
+  content:
+    merge: true
+
+content:
+  - name: news
+    label: News
+    type: collection
+    path: _posts
+    format: yaml-frontmatter
+    subfolders: false
+    view:
+      primary: title
+      fields: [ date, category ]
+      sort: [ date, title ]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: layout
+        type: string
+        hidden: true
+        default: post
+      - name: author
+        type: string
+        hidden: true
+        default: Mark Morgan
+      - name: title
+        label: Headline
+        description: The title people will see on the News page and on the post itself.
+        type: string
+        required: true
+      - name: date
+        label: Publish Date
+        description: Use the date you want shown on the News page.
+        type: date
+        required: true
+      - name: last_modified
+        hidden: true
+        type: date
+      - name: category
+        label: Type
+        description: Pick the type that best matches this post.
+        type: select
+        required: true
+        default: Article
+        options:
+          creatable: true
+          values:
+            - Article
+            - Book
+            - Podcast
+            - Design
+      - name: news_order
+        label: Display Order
+        description: Smaller numbers appear first on the News page. For a brand new top story, use 0.
+        type: number
+        required: true
+      - name: excerpt
+        label: Short Summary
+        description: A short paragraph shown on the News page card.
+        type: text
+        required: true
+      - name: featured
+        hidden: true
+        type: boolean
+        default: true
+      - name: featured_image
+        label: News Card Image
+        description: This image appears on the News page card.
+        type: image
+        required: true
+      - name: header_image
+        label: Top Banner Image
+        description: Optional. Usually leave this empty to use the standard orange-fish banner.
+        type: image
+      - name: tags
+        label: Tags
+        description: Optional. Add a few short tags to help organize the post.
+        type: select
+        list: true
+        options:
+          creatable: true
+          values:
+            - Asian Carp
+            - Invasive Species
+            - Children's Book
+            - Food Security
+            - Humanitarian Aid
+            - Haiti
+            - Food Preservation
+            - Podcast
+            - Conservation
+            - Gastronomy
+            - Sustainable Food
+            - Missouri
+            - Food Innovation
+            - Nutrition
+            - Consumer Perception
+            - Missouri Anglers
+            - Food Neophobia
+      - name: body
+        label: Story Text
+        description: Write the full post here. Normal paragraphs are fine. Existing links or embeds can stay as they are.
+        type: code
+        options:
+          language: markdown
