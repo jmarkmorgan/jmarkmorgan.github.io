@@ -5,11 +5,10 @@ date: 2026-02-26
 last_modified: 2026-02-26
 author: Mark Morgan
 category: Article
-header_image: /assets/img/photos/fishnet.webp
 featured_image: /assets/img/photos/fishnet.webp
 featured: true
 excerpt: Mark Morgan is turning invasive Missouri carp into a nutrient-rich food solution that could help reduce environmental damage while fighting malnutrition.
-news_order: 5
+news_order: 3
 tags:
   - Asian Carp
   - Missouri

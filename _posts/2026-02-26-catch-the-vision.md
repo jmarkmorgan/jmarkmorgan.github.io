@@ -6,10 +6,9 @@ last_modified: 2026-02-26
 author: Mark Morgan
 category: Article
 featured: true
-#header_image: /assets/img/photos/bg5.webp
 featured_image: /assets/img/photos/boat.webp
 excerpt: Turn invasive Asian carp into a $1 superfood that protects our waters and feeds hungry kids worldwide—one bite at a time.
-news_order: 8
+news_order: 6
 tags:
   - Asian Carp
   - Humanitarian Aid
