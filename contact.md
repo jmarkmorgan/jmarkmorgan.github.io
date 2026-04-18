@@ -2,6 +2,10 @@
 layout: default
 title: Contact Us
 permalink: /contact/
+meta_title: Contact Wish Upon a Fish
+description: Contact Wish Upon a Fish to ask questions, explore partnerships, or support its mission to fight malnutrition with fish protein powder.
+image: /assets/img/photos/orange-fish.webp
+schema_type: ContactPage
 custom_color:
 custom_font: 
 scroll_top_btn:

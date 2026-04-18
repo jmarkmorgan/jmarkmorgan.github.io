@@ -8,12 +8,12 @@ permalink: /search-data.json
     "title": {{ post.title | jsonify }},
     "content": {{ post.content | strip_html | strip_newlines | jsonify }},
     "excerpt": {{ post.excerpt | strip_html | strip_newlines | jsonify }},
-    "category": {{ post.categories[0] | default: "" | jsonify }},
+    "category": {{ post.category | default: post.categories[0] | default: "" | jsonify }},
     "tags": {{ post.tags | jsonify }},
-    "url": "{{ site.baseurl }}{{ post.url }}",
-    "date": "{{ post.date | date: '%d %b %Y' }}",
+    "url": {{ post.url | relative_url | jsonify }},
+    "date": {{ post.date | date: "%d %b %Y" | jsonify }},
     "author": {{ post.author | default: "Unknown" | jsonify }},
-    "image": {{ post.image | default: "" | jsonify }}
+    "image": {{ post.image | default: post.featured_image | default: site.data.theme.meta_og_image | jsonify }}
   }{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ]

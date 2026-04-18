@@ -2,6 +2,10 @@
 layout: default
 title: Leadership
 permalink: /leadership/
+meta_title: Wish Upon a Fish Leadership | Board and Collaborators
+description: Meet the Wish Upon a Fish board of directors and collaborators advancing nutrition, conservation, and humanitarian partnerships.
+image: /assets/img/avatars/markmorgan.webp
+schema_type: AboutPage
 custom_color:
 custom_font:
 scroll_top_btn:

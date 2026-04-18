@@ -3,6 +3,9 @@ lang: "en-US"
 baseurl: ""
 url: "https://wishuponafish.org"
 domain: "wishuponafish.org"
+description: "Wish Upon a Fish is a US-based nonprofit that transforms invasive carp into shelf-stable fish protein powder to nourish women and children facing malnutrition."
+email: "contact@wishuponafish.org"
+logo: "/assets/img/logo-dark.webp"
 
 # Build settings
 markdown: kramdown
@@ -89,7 +92,7 @@ exclude:
 
 # LiveReload settings
 livereload_max_delay: 5
-livereload_min_delay: 2.5
+livereload_min_delay: 3
 
 # Tags settings
 tag_page_layout: blog/tag_page

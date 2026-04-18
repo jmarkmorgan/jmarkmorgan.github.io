@@ -1,32 +1,43 @@
 {% assign style_key = include.header_style | default: 'standard' %}
 {% assign style = site.data.header.styles[style_key] %}
+{% assign category_slug = include.category | slugify %}
+{% assign author_slug = include.meta_author | slugify %}
+{% assign link_text_class = '' %}
+{% if style.overlay %}
+{% assign link_text_class = 'text-reset' %}
+{% endif %}
 
+{% if style.overlay %}
 <section class="{{ style.section_classes }}"
-  {% if style.overlay %}
-    data-image-src="{{ include.background_image | default: style.default_background_image | default: '/assets/img/photos/orange-fish.webp' }}"
-  {% endif %}>
+         data-image-src="{{ include.background_image | default: style.default_background_image | default: '/assets/img/photos/orange-fish.webp' }}">
   <div class="container {{ style.container_classes }}">
     <div class="row">
       <div class="{{ style.column_classes }}">
         <div class="post-header">
           {% if style.show_category and include.category %}
-            <div class="post-category text-line {{ style.text_classes }}">
-              <a href="#" class="{% if style.overlay %}text-reset{% endif %}" rel="category">{{ include.category }}</a>
-            </div>
+          <div class="post-category text-line {{ style.text_classes }}">
+            <a class="{{ link_text_class }}" href="https://wishuponafish.org/news/category/{{ category_slug }}/"
+               rel="category">{{ include.category }}</a>
+          </div>
           {% endif %}
           <h1 class="{{ style.title_classes }}">{{ include.title }}</h1>
           <ul class="post-meta mb-5 {{ style.text_classes }}">
             {% if include.meta_date %}
-              <li class="post-date"><i class="uil uil-calendar-alt"></i><span>{{ include.meta_date | date: "%d %b %Y" }}</span></li>
+            <li class="post-date"><i
+                    class="uil uil-calendar-alt"></i><span>{{ include.meta_date | date: "%d %b %Y" }}</span></li>
             {% endif %}
             {% if include.meta_author %}
-              <li class="post-author"><i class="uil uil-user"></i><a href="#" class="{% if style.overlay %}text-reset{% endif %}"><span>By {{ include.meta_author }}</span></a></li>
+            <li class="post-author"><i class="uil uil-user"></i><a class="{{ link_text_class }}"
+                                                                   href="https://wishuponafish.org/authors/{{ author_slug }}/"><span>By {{ include.meta_author }}</span></a>
+            </li>
             {% endif %}
             {% if include.meta_comments %}
-              <li class="post-comments"><i class="uil uil-comment"></i><a href="#" class="{% if style.overlay %}text-reset{% endif %}">{{ include.meta_comments }}<span> Comments</span></a></li>
+            <li class="post-comments"><i
+                    class="uil uil-comment"></i><span>{{ include.meta_comments }}<span> Comments</span></span></li>
             {% endif %}
             {% if include.meta_likes %}
-              <li class="post-likes"><i class="uil uil-heart-alt"></i><a href="#" class="{% if style.overlay %}text-reset{% endif %}">{{ include.meta_likes }}<span> Likes</span></a></li>
+            <li class="post-likes"><i
+                    class="uil uil-heart-alt"></i><span>{{ include.meta_likes }}<span> Likes</span></span></li>
             {% endif %}
           </ul>
         </div>
@@ -34,3 +45,41 @@
     </div>
   </div>
 </section>
+{% else %}
+<section class="{{ style.section_classes }}">
+  <div class="container {{ style.container_classes }}">
+    <div class="row">
+      <div class="{{ style.column_classes }}">
+        <div class="post-header">
+          {% if style.show_category and include.category %}
+            <div class="post-category text-line {{ style.text_classes }}">
+              <a class="{{ link_text_class }}" href="https://wishuponafish.org/news/category/{{ category_slug }}/"
+                 rel="category">{{ include.category }}</a>
+            </div>
+          {% endif %}
+          <h1 class="{{ style.title_classes }}">{{ include.title }}</h1>
+          <ul class="post-meta mb-5 {{ style.text_classes }}">
+            {% if include.meta_date %}
+            <li class="post-date"><i
+                    class="uil uil-calendar-alt"></i><span>{{ include.meta_date | date: "%d %b %Y" }}</span></li>
+            {% endif %}
+            {% if include.meta_author %}
+            <li class="post-author"><i class="uil uil-user"></i><a class="{{ link_text_class }}"
+                                                                   href="https://wishuponafish.org/authors/{{ author_slug }}/"><span>By {{ include.meta_author }}</span></a>
+            </li>
+            {% endif %}
+            {% if include.meta_comments %}
+            <li class="post-comments"><i
+                    class="uil uil-comment"></i><span>{{ include.meta_comments }}<span> Comments</span></span></li>
+            {% endif %}
+            {% if include.meta_likes %}
+            <li class="post-likes"><i
+                    class="uil uil-heart-alt"></i><span>{{ include.meta_likes }}<span> Likes</span></span></li>
+            {% endif %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}

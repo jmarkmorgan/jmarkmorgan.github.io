@@ -2,6 +2,10 @@
 layout: default
 title: Wish Upon a Fish
 permalink: /
+meta_title: Wish Upon a Fish | Fighting Malnutrition with Fish Protein Powder
+description: Wish Upon a Fish is a US-based nonprofit that transforms invasive carp into shelf-stable fish protein powder to nourish women and children facing malnutrition.
+image: /assets/img/photos/haiti.webp
+schema_type: WebPage
 custom_font: space
 box_layout: true
 bg_light: true

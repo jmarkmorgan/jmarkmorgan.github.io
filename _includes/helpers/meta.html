@@ -1,37 +1,75 @@
+{% assign site_title = site.title | default: site.data.theme.title %}
+{% assign site_description = site.description | default: site.data.theme.description | markdownify | strip_html | normalize_whitespace | strip %}
+{% assign raw_title = page.meta_title | default: page.title | default: site_title | strip_html | normalize_whitespace | strip %}
+{% if raw_title == site_title %}
+{% assign page_title = site_title %}
+{% elsif raw_title contains site_title %}
+{% assign page_title = raw_title %}
+{% else %}
+{% assign page_title = raw_title | append: " | " | append: site_title %}
+{% endif %}
+{% assign raw_description = page.meta_description | default: page.description | default: page.excerpt | default: site_description %}
+{% assign page_description = raw_description | markdownify | strip_html | normalize_whitespace | strip %}
+{% if page_description == "" %}
+{% assign page_description = site_description %}
+{% endif %}
+{% assign page_description = page_description | truncate: 160 %}
+{% assign canonical_path = page.url | replace: "index.html", "" %}
+{% assign canonical_url = canonical_path | absolute_url %}
+{% assign page_image_path = page.image | default: page.featured_image | default: page.hero.bg_image | default: site.data.theme.meta_og_image | default: site.logo %}
+{% assign page_image = page_image_path | absolute_url %}
+{% assign page_type = "website" %}
+{% if page.layout == "post" or page.collection == "posts" %}
+{% assign page_type = "article" %}
+{% endif %}
+{% assign robots_content = "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" %}
+{% if page.noindex or page.url == "/404.html" or page.url == "/search.html" %}
+{% assign robots_content = "noindex, follow" %}
+{% endif %}
+{% if paginator and paginator.page and paginator.page > 1 %}
+{% assign robots_content = "noindex, follow" %}
+{% endif %}
+
 <meta charset="utf-8">
-<link href="{{ page.url | absolute_url }}" rel="canonical">
-<!-- Primary Meta Tags -->
-<title>{% if page.meta_title %} {{ page.meta_title }} {% elsif page.title %} {{ page.title }} {% else %} {{ site.data.theme.title }}{% endif %}</title>
-<meta name="title" content="{% if page.meta_title %} {{ page.meta_title }} {% elsif page.title %} {{ page.title }} {% else %} {{ site.data.theme.title }}{% endif %}">
-<meta name="description" content="{% if page.meta_description %} {{ page.meta_description }} {% elsif page.description %} {{ page.description}} {% else %}
-         {{ site.data.theme.description }}{% endif %}">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>{{ page_title | xml_escape }}</title>
+<meta content="{{ page_description | xml_escape }}" name="description">
+<meta content="{{ page.author | default: site.data.theme.company_name | default: site_title | xml_escape }}"
+      name="author">
+<meta content="{{ robots_content }}" name="robots">
+<meta content="{{ robots_content }}" name="googlebot">
+<meta content="#0f5d75" name="theme-color">
+<link href="https://wishuponafish.org{{ canonical_path }}" rel="canonical">
+<link href="https://wishuponafish.org/assets/img/favicon.webp" rel="icon">
+<link href="https://wishuponafish.org/feed.xml" rel="alternate" title="{{ site_title | xml_escape }}"
+      type="application/rss+xml">
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta content="{{ page.url | absolute_url }}" property="og:url">
-<meta property="og:title" content="{% if page.meta_title %} {{ page.meta_title }} {% elsif page.title %} {{ page.title }} {% else %} {{ site.data.theme.title }}{% endif %}">
-<meta property="og:description" content="{% if page.meta_description %} {{ page.meta_description }} {% elsif page.description %} {{ page.description}} {% else %}
-    {{ site.data.theme.description }}{% endif %}">
-{% if page.image %}
-<meta content="{{ page.image | absolute_url }}" property="og:image"/>
-{% elsif site.data.theme.meta_og_image %}
-<meta content="{{ site.data.theme.meta_og_image | absolute_url }}" property="og:image"/>
+<meta content="{{ site.lang | default: 'en-US' | replace: '-', '_' }}" property="og:locale">
+<meta content="{{ page_type }}" property="og:type">
+<meta content="{{ site_title | xml_escape }}" property="og:site_name">
+<meta content="{{ canonical_url }}" property="og:url">
+<meta content="{{ page_title | xml_escape }}" property="og:title">
+<meta content="{{ page_description | xml_escape }}" property="og:description">
+<meta content="{{ page_image }}" property="og:image">
+<meta content="{{ raw_title | xml_escape }}" property="og:image:alt">
+
+<meta content="summary_large_image" name="twitter:card">
+<meta content="{{ canonical_url }}" name="twitter:url">
+<meta content="{{ page_title | xml_escape }}" name="twitter:title">
+<meta content="{{ page_description | xml_escape }}" name="twitter:description">
+<meta content="{{ page_image }}" name="twitter:image">
+<meta content="{{ raw_title | xml_escape }}" name="twitter:image:alt">
+
+{% if page_type == "article" %}
+<meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
+<meta content="{{ page.last_modified | default: page.date | date_to_xmlschema }}" property="article:modified_time">
+{% if page.author %}
+<meta content="{{ page.author | xml_escape }}" property="article:author">
 {% endif %}
-
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta content="{{ page.url | absolute_url }}" property="twitter:url">
-<meta property="twitter:title" content="{% if page.meta_title %} {{ page.meta_title }} {% elsif page.title %} {{ page.title }} {% else %} {{ site.data.theme.title }}{% endif %}">
-<meta property="twitter:description" content="{% if page.meta_description %} {{ page.meta_description }} {% elsif page.description %} {{ page.description}} {% else %}
-    {{ site.data.theme.description }}{% endif %}">
-{% if page.image %}
-<meta content="{{ page.image | absolute_url }}" property="twitter:image"/>
-{% elsif site.data.theme.meta_twitter_image %}
-<meta content="{{ site.data.theme.meta_twitter_image | absolute_url }}" property="twitter:image"/>
+{% if page.category %}
+<meta content="{{ page.category | xml_escape }}" property="article:section">
 {% endif %}
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script
-        async
-        src="https://widgets.givebutter.com/latest.umd.cjs?acct=U9YgsCTi8ATtqSCG&p=other"
-></script>
+{% for tag in page.tags %}
+<meta content="{{ tag | xml_escape }}" property="article:tag">
+{% endfor %}
+{% endif %}

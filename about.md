@@ -2,6 +2,10 @@
 layout: default
 title: About
 permalink: /about/
+meta_title: About Wish Upon a Fish | Mission, Rationale, and Impact
+description: Learn how Wish Upon a Fish combats malnutrition by turning invasive carp into shelf-stable fish protein powder and building partnerships around global nutrition.
+image: /assets/img/photos/powder.webp
+schema_type: AboutPage
 custom_color:
 custom_font:
 scroll_top_btn:
