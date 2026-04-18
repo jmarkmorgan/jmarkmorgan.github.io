@@ -35,9 +35,29 @@ class PagesCmsNewsCollectionTest < Minitest::Test
     end
   end
 
+  def test_news_collection_uses_podcast_embed_url_field
+    news_collection = config.fetch("content").find { |entry| entry["name"] == "news" }
+    refute_nil news_collection, "expected a Pages CMS news collection"
+
+    podcast_embed_url = news_collection.fetch("fields").find { |field| field["name"] == "podcast_embed_url" }
+    refute_nil podcast_embed_url, "expected podcast_embed_url field in news collection"
+    assert_equal "string", podcast_embed_url["type"]
+
+    embed_code = news_collection.fetch("fields").find { |field| field["name"] == "embed_code" }
+    assert_nil embed_code, "expected raw embed_code field to be removed from Pages CMS"
+  end
+
+  def test_post_layout_renders_podcast_embed_fields
+    content = File.read(File.expand_path("../_layouts/post.html", __dir__))
+
+    assert_includes content, "page.podcast_embed_url"
+    assert_includes content, "page.embed_code"
+    assert_includes content, "iframe"
+  end
+
   private
 
   def config
-    @config ||= YAML.safe_load_file(NEWS_CONFIG_PATH)
+    @config ||= YAML.safe_load(File.read(NEWS_CONFIG_PATH), aliases: true)
   end
 end

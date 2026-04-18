@@ -21,6 +21,7 @@ Use this guide when adding or updating a News post in Pages CMS.
 - `Short Summary`: one short paragraph for the News page card.
 - `News Card Image`: the image shown on the News page. A default fish image is filled in automatically, so you can save first and swap in a custom image later.
 - `Story Text`: the full post.
+- `Podcast Embed URL`: optional. Paste only the embed URL from Spotify or Apple Podcasts, not the full iframe code.
 
 3. Leave `Top Banner Image` empty unless you want a custom banner at the top of the post.
 4. Add tags if helpful.
@@ -37,10 +38,13 @@ Use this guide when adding or updating a News post in Pages CMS.
 - Smaller `Display Order` numbers appear first.
 - If you are posting a brand new top story, `0` is the easiest choice.
 - The `Short Summary` should stay brief.
-- The `Story Text` can include normal text, links, and existing embeds.
+- The `Story Text` can include normal text, links, and images.
+- For podcast players, use `Podcast Embed URL` instead of pasting iframe HTML into the story.
 
 ## If something looks wrong
 
 - Wrong image on the News page: check `News Card Image`.
 - Wrong banner at the top of the post: clear `Top Banner Image`.
 - Wrong position on the News page: adjust `Display Order`.
+- Podcast player missing: make sure `Podcast Embed URL` contains the provider's embed link, not a regular episode page
+  URL.

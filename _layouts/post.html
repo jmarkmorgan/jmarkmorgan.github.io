@@ -70,6 +70,49 @@ layout: default
                 <div class="classic-view">
                   <article class="post">
                     <div class="post-content mb-5">
+                        {% assign podcast_embed_url = page.podcast_embed_url | default: page.embed_url %}
+                        {% if podcast_embed_url != blank %}
+                        <div class="mb-5">
+                            {% if podcast_embed_url contains 'embed.podcasts.apple.com' %}
+                            <iframe
+                                    allow="autoplay *; encrypted-media *; clipboard-write"
+                                    class="podcast-embed-frame"
+                                    data-embed-src="{{ podcast_embed_url }}"
+                                    height="175"
+                                    loading="lazy"
+                                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+                                    src="about:blank"
+                                    style="border: 0; border-radius: 12px; width: 100%;"
+                                    title="{{ page.title }} podcast player"
+                                    width="100%"
+                            ></iframe>
+                            <script>
+                                document.currentScript.previousElementSibling.src =
+                                    document.currentScript.previousElementSibling.dataset.embedSrc;
+                            </script>
+                            {% else %}
+                            <iframe
+                                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                    class="podcast-embed-frame"
+                                    data-embed-src="{{ podcast_embed_url }}"
+                                    height="352"
+                                    loading="lazy"
+                                    src="about:blank"
+                                    style="border: 0; border-radius: 12px; width: 100%;"
+                                    title="{{ page.title }} podcast player"
+                                    width="100%"
+                            ></iframe>
+                            <script>
+                                document.currentScript.previousElementSibling.src =
+                                    document.currentScript.previousElementSibling.dataset.embedSrc;
+                            </script>
+                            {% endif %}
+                        </div>
+                        {% elsif page.embed_code != blank %}
+                        <div class="mb-5">
+                            {{ page.embed_code }}
+                        </div>
+                        {% endif %}
                       {{ content }}
                     </div>
                     <div class="post-footer-meta border-top mt-5">

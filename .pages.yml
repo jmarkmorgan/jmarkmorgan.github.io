@@ -63,10 +63,6 @@ content:
         description: A short paragraph shown on the News page card.
         type: text
         required: true
-      - name: featured
-        hidden: true
-        type: boolean
-        default: true
       - name: featured_image
         label: News Card Image
         description: This image appears on the News page card. New posts start with the default fish image, so you can save first and upload a custom image later.
@@ -108,9 +104,7 @@ content:
         type: rich-text
         options:
           path: assets/img/photos
-      - name: embed_code
-        label: Advanced Embed
-        description: Optional. Only use this for podcast players or special embeds. Most posts should leave this blank.
-        type: code
-        options:
-          language: html
+      - name: podcast_embed_url
+        label: Podcast Embed URL
+        description: "Optional. Paste the podcast player's embed URL only, not the full iframe HTML. Example: a Spotify or Apple Podcasts embed link."
+        type: string
