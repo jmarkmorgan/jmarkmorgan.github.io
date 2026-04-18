@@ -32,16 +32,15 @@ header_style: blog-list
           {% for post in page.posts %}
           <article class="post mb-12">
             <div class="card">
-              {% if post.featured_image %}
+              {% assign post_image = post.featured_image | default: '/assets/img/photos/orange-fish.webp' %}
               <figure class="card-img-top overlay overlay-1 hover-scale">
                 <a href="{{ post.url }}">
-                  <img src="{{ post.featured_image }}" alt="{{ post.title }}" />
+                  <img src="{{ post_image }}" alt="{{ post.title }}" />
                 </a>
                 <figcaption>
                   <h5 class="from-top mb-0">Read More</h5>
                 </figcaption>
               </figure>
-              {% endif %}
               <div class="card-body">
                 <div class="post-header">
                   <div class="post-category text-line">

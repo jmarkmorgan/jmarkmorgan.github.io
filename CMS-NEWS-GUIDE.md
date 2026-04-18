@@ -19,7 +19,7 @@ Use this guide when adding or updating a News post in Pages CMS.
 - `Type`: usually `Article`, `Book`, or `Podcast`.
 - `Display Order`: use `0` if this should appear first on the News page.
 - `Short Summary`: one short paragraph for the News page card.
-- `News Card Image`: the image shown on the News page.
+- `News Card Image`: the image shown on the News page. A default fish image is filled in automatically, so you can save first and swap in a custom image later.
 - `Story Text`: the full post.
 
 3. Leave `Top Banner Image` empty unless you want a custom banner at the top of the post.

@@ -26,9 +26,10 @@
       {% for related_post in final_related %}
       <div class="swiper-slide">
         <article>
+          {% assign related_post_image = related_post.featured_image | default: '/assets/img/photos/orange-fish.webp' %}
           <figure class="overlay overlay-1 hover-scale rounded mb-5">
             <a href="{{ related_post.url }}"> 
-              <img src="{{ related_post.featured_image }}" alt="{{ related_post.title }}" />
+              <img src="{{ related_post_image }}" alt="{{ related_post.title }}" />
             </a>
             <figcaption>
               <h5 class="from-top mb-0">Read More</h5>

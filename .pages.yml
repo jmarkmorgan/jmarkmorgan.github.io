@@ -69,8 +69,9 @@ content:
         default: true
       - name: featured_image
         label: News Card Image
-        description: This image appears on the News page card.
+        description: This image appears on the News page card. New posts start with the default fish image, so you can save first and upload a custom image later.
         type: image
+        default: /assets/img/photos/orange-fish.webp
         required: true
       - name: header_image
         label: Top Banner Image

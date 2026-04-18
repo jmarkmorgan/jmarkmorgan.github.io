@@ -65,6 +65,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      featured_image: "/assets/img/photos/orange-fish.webp"
 
 # Exclude from processing and watching
 exclude:

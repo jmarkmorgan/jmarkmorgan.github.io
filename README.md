@@ -30,7 +30,7 @@ News posts can be edited through [Pages CMS](https://app.pagescms.org/) using th
 Notes:
 
 - `news_order` controls the order on `/news/`; lower numbers appear first.
-- `featured_image` is used for the News card image.
+- `featured_image` is used for the News card image. New posts now default to the orange fish image, so the post can be saved before a custom image is uploaded.
 - `header_image` is optional; if left empty, the post uses the default orange banner.
 - Publishing still happens through the existing GitHub Actions Pages workflow after content is committed.
 - A plain-English editor guide is in `CMS-NEWS-GUIDE.md`.
