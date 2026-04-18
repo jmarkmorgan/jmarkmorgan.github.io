@@ -26,6 +26,16 @@ class PagesCmsNewsCollectionTest < Minitest::Test
     assert_equal DEFAULT_NEWS_IMAGE, featured_image["default"]
   end
 
+  def test_news_collection_uses_title_label_for_title_field
+    news_collection = config.fetch("content").find { |entry| entry["name"] == "news" }
+    refute_nil news_collection, "expected a Pages CMS news collection"
+
+    title_field = news_collection.fetch("fields").find { |field| field["name"] == "title" }
+    refute_nil title_field, "expected title field in news collection"
+
+    assert_equal "Title", title_field["label"]
+  end
+
   def test_news_templates_fall_back_to_default_image
     TEMPLATE_PATHS.each do |relative_path|
       absolute_path = File.expand_path("../#{relative_path}", __dir__)

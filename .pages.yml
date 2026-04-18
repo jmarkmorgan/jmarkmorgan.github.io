@@ -28,7 +28,7 @@ content:
         hidden: true
         default: Mark Morgan
       - name: title
-        label: Headline
+        label: Title
         description: The title people will see on the News page and on the post itself.
         type: string
         required: true

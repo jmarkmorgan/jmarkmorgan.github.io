@@ -14,7 +14,7 @@ Use this guide when adding or updating a News post in Pages CMS.
 1. Click `New`.
 2. Fill in these fields:
 
-- `Headline`: the post title.
+- `Title`: the post title.
 - `Publish Date`: the date you want shown on the site.
 - `Type`: usually `Article`, `Book`, or `Podcast`.
 - `Display Order`: use `0` if this should appear first on the News page.
